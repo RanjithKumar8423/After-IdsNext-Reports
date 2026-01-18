@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Regression Suite" verbose="3" thread-count="1" parallel="tests">
+
+<!--
+ <test name="IdsNextLogin Test">
+<parameter name="browser" value="null" />
+
+  <classes>
+   <class name="com.qa.reports.tests.LoginPageTest" />
+  </classes>
+ </test>
+
+ <test name="IdsNextHome Test">
+ <parameter name="browser" value="null" />
+
+  <classes>
+   <class name="com.qa.reports.tests.HomePageTest" />
+  </classes>
+ </test>-->
+ <test name="IdsNextReport Test">
+ <parameter name="browser" value="null" />
+
+  <classes>
+   <class name="com.qa.reports.tests.ReportPageTest" />
+  </classes>
+ </test>
+</suite>
