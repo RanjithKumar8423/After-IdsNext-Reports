@@ -35,8 +35,8 @@ public class DriverFactory {
 			else {
 				// driver = new ChromeDriver(optionsManager.getChromeOptions());
 				tLDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
-				break;
 			}
+			break;
 
 		case "edge":
 			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
@@ -46,8 +46,8 @@ public class DriverFactory {
 
 				// driver = new EdgeDriver(optionsManager.getEdgeOptions());
 				tLDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
-				break;
 			}
+			break;
 
 		default:
 			System.out.println("=======PLS PASS RIGHT BROWSER========");
