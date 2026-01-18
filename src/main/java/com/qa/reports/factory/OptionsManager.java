@@ -23,19 +23,19 @@ public class OptionsManager {
 		co = new ChromeOptions();
 
 		// ===== Disable Chrome Password & Security Popups =====
-//		Map<String, Object> prefs = new HashMap<>();
-//		prefs.put("credentials_enable_service", false);
-//		prefs.put("profile.password_manager_enabled", false);
-//		prefs.put("profile.password_manager_leak_detection", false);
-//
-//		co.setExperimentalOption("prefs", prefs);
+		Map<String, Object> prefs = new HashMap<>();
+		prefs.put("credentials_enable_service", false);
+		prefs.put("profile.password_manager_enabled", false);
+		prefs.put("profile.password_manager_leak_detection", false);
+
+		co.setExperimentalOption("prefs", prefs);
 
 		// Disable automation info bar & notifications
-//		co.addArguments("--disable-notifications");
-//		co.addArguments("--disable-infobars");
-//		co.addArguments("--disable-save-password-bubble");
-//		co.addArguments("--disable-features=PasswordLeakDetection");
-//		co.addArguments("--disable-features=AutofillServerCommunication");
+		co.addArguments("--disable-notifications");
+		co.addArguments("--disable-infobars");
+		co.addArguments("--disable-save-password-bubble");
+		co.addArguments("--disable-features=PasswordLeakDetection");
+		co.addArguments("--disable-features=AutofillServerCommunication");
 
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			co.setCapability("browserName", "chrome");
@@ -58,7 +58,7 @@ public class OptionsManager {
 		eo = new EdgeOptions();
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			eo.setCapability("browserName", "edge");
-			//eo.setCapability("platform", Platform.LINUX);
+			eo.setCapability("platform", Platform.LINUX);
 
 		}
 
