@@ -39,8 +39,9 @@ public class OptionsManager {
 
 //		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 //			co.setCapability("browserName", "chrome");
-//
-//		}
+//			}
+		
+		// Required for Docker
 		co.addArguments("--no-sandbox");
         co.addArguments("--disable-dev-shm-usage");
 
@@ -60,10 +61,9 @@ public class OptionsManager {
 		eo = new EdgeOptions();
 //		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 //			eo.setCapability("browserName", "edge");
-//			eo.setCapability("platform", Platform.LINUX);
-//
 //		}
-		  // Required for Docker
+		
+		 // Required for Docker 4.x version onwoards
         eo.addArguments("--no-sandbox");
         eo.addArguments("--disable-dev-shm-usage");
 
