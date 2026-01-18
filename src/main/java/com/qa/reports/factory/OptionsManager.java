@@ -37,10 +37,10 @@ public class OptionsManager {
 		co.addArguments("--disable-features=PasswordLeakDetection");
 		co.addArguments("--disable-features=AutofillServerCommunication");
 
-//		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
-//			co.setCapability("browserName", "chrome");
-//
-//		}
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			co.setCapability("browserName", "chrome");
+
+		}
 
 		if (Boolean.parseBoolean(prop.getProperty("headless"))) {
 			System.out.println("======RUNNING ON HEADLESS MODE=====");
@@ -58,7 +58,7 @@ public class OptionsManager {
 		eo = new EdgeOptions();
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			eo.setCapability("browserName", "edge");
-			//eo.setCapability("platform", Platform.LINUX);
+			eo.setCapability("platform", Platform.LINUX);
 
 		}
 
