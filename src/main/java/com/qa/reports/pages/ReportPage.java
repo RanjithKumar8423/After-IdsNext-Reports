@@ -19,7 +19,7 @@ public class ReportPage {
 	private By tscid=By.xpath("//span[text()='tsc7582@idsnext.com']");
 	private By logout=By.xpath("//a[contains(text(),'Logout')]");
 	private By backBtn=By.xpath("//button[text()='Back']");
-	private By backBtn1=By.xpath("//button[text()='Back']");
+
 	
 	public ReportPage(WebDriver driver) {
 		this.driver=driver;
