@@ -20,7 +20,7 @@
   </classes>
  </test>-->
  <test name="IdsNextReport Test">
- <parameter name="browser" value="edge" />
+ <parameter name="browser" value="null" />
 
   <classes>
    <class name="com.qa.reports.tests.ReportPageTest" />
