@@ -58,7 +58,7 @@ public class OptionsManager {
 		eo = new EdgeOptions();
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			eo.setCapability("browserName", "edge");
-			//eo.setCapability("platform", Platform.LINUX);
+			eo.setCapability("platform", Platform.LINUX);
 
 		}
 
