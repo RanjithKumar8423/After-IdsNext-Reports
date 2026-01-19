@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.qa.reports.utils.ElementUtil;
 
+import io.qameta.allure.internal.shadowed.jackson.databind.annotation.JsonAppend.Prop;
+
 public class ReportPage {
 
 	WebDriver driver;
@@ -16,7 +18,7 @@ public class ReportPage {
 	private By fxClick=By.xpath("//span[text()='Front Office Reports']");
 	private By selectReport=By.xpath("//span[text()='Consolidated Arrival Report']");
 	private By generateReport=By.xpath("//button[text()='Generate Report']");
-	private By tscid=By.xpath("//span[text()='tsc7582@idsnext.com']");
+	private By tscid=By.xpath("//i[@class='fa fa-chevron-down']");
 	private By logout=By.xpath("//a[contains(text(),'Logout')]");
 	private By backBtn=By.xpath("//button[text()='Back']");
 
@@ -24,6 +26,7 @@ public class ReportPage {
 	public ReportPage(WebDriver driver) {
 		this.driver=driver;
 		ele=new ElementUtil(driver);
+		
 	}
 	
 	public String ReportPageTiltle() {
