@@ -38,7 +38,7 @@ public class ReportPage {
 	public void reportSelect() {
 		try {
 			//ele.handleMenuSubMenuLevel2(mousingEle, fxClick, reportClick);
-			ele.handleMenuSubMenuLevel4(mousingEle, reportClick, fxClick, selectReport, generateReport);
+			ele.handleMenuSubMenuLevel4(mousingEle, reportClick, fxClick, selectReport, generateReport, 10);
 			ele.waitForElementVisible(backBtn, 20);
 			ele.doclick(tscid, 5);
 			ele.doclick(logout, 5);

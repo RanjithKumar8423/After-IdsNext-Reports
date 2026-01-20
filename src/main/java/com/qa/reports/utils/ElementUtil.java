@@ -235,19 +235,20 @@ public class ElementUtil {
 		act.click(getElement(submenu3)).perform();
 	}
 
-	public void handleMenuSubMenuLevel4(By level1, By level2, By level3, By level4, By level5) throws InterruptedException {
+	public void handleMenuSubMenuLevel4(By level1, By level2, By level3, By level4, By level5, int time) throws InterruptedException {
 
 		Actions act = new Actions(driver);
-		act.moveToElement(getElement(level1)).perform();
-		Thread.sleep(3000);
-		act.click(getElement(level2)).perform();
-		Thread.sleep(3000);
-		act.click(getElement(level3)).perform();
-		Thread.sleep(3000);
-		act.click(getElement(level4)).perform();
-		Thread.sleep(10000);
-		act.click(getElement(level5)).perform();
-
+		WebElement l1 = waitForElementVisible(level1, time);
+		act.moveToElement(l1).perform();
+		WebElement l2 = waitForElementVisible(level2, time);
+		act.click(l2).perform();
+		WebElement l3 = waitForElementVisible(level3, time);
+		act.click(l3).perform();
+		WebElement l4 = waitForElementVisible(level4, time);
+		act.click(l4).perform();
+		WebElement l5 = waitForElementVisible(level5, time);
+		act.click(l5).perform();
+	
 	}
 
 	public Actions dragElementDrop(By locator1, By locator2) {
